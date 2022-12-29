@@ -1,0 +1,92 @@
+<style>
+body {
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 40px 0 20px;
+}
+
+button {
+  
+  display: block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  border: 2px solid #00b8d4;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #00b8d4;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00b8d4;
+  color: #fff;
+}
+
+#result {
+  text-align: center;
+  font-size: 24px;
+  margin: 10% 35%;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  min-width: 300px;
+  min-height: 40px;
+  background-color : #808080;
+  
+}
+
+body {
+  background-image: url("https://media-exp1.licdn.com/dms/image/C561BAQExB68Ig_EHuw/company-background_10000/0/1605686048728?e=2147483647&v=beta&t=wt9V1HMhJ2uQ7IS9jdFiaH4uWLMZr-qoGD3OCUx734c");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tirage au sort</title>
+</head>
+<body>
+  <h1>Tirage au sort Tales Up</h1>
+  <button onclick="doDraw()">Tirer</button>
+  <p id="result"></p>
+
+  <script>
+    const results = [
+  "🌙 Jusqu'à la Lune",
+  "🌵 Les Dragons d'Argent",
+  "💨 Oubliée par le Temps",
+  "🐱 Les Potron-Minets",
+  "👻 Le Fantôme de Vienne",
+  "🏺 Légendes Englouties",
+  "🚀 Le Signal de Centauri",
+  "🧙 Les Secrets de l'Académie",
+  "🧑‍⚖️ Le Pacte",
+  "🤖 Motion 4",
+  "🏰 Pour la Gloire d'Odin",
+  "🦜 La Chance du Pirate",
+  "💰 Un plan presque parfait",
+  "🌲 Le Dieu des Cimes",
+  "🧟 Avant la Nuit",
+  "🤿 Le Fardeau de Donoma",
+  "🐠 De Corail et d'Or"
+];
+
+
+    function doDraw() {
+      const result = results[Math.floor(Math.random() * results.length)];
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>
